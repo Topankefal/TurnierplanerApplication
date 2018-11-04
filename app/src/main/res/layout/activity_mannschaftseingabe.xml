@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Mannschaftseingabe">
+    tools:context=".Mannschaftseingabe"
+    android:background="@drawable/hintergrund" >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,6 +38,7 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Name"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText6" />
 
@@ -50,6 +52,7 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Name"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
@@ -63,6 +66,7 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Name"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
@@ -78,6 +82,7 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Name"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.05"
                 app:layout_constraintStart_toStartOf="parent"
@@ -85,15 +90,16 @@
 
             <TextView
                 android:id="@+id/textView18"
-                android:layout_width="118dp"
-                android:layout_height="35dp"
+                android:layout_width="138dp"
+                android:layout_height="54dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
                 android:text="Gruppe A"
-                android:textSize="24sp"
+                android:textSize="30sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.03"
                 app:layout_constraintStart_toStartOf="parent"
