@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Turnierplaner</string>
+    <string-array name="gruppen">
+        <item>2</item>
+        <item>4</item>
+        <item>6</item>
+    </string-array>
+</resources>
