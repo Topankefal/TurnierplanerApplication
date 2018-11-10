@@ -7,11 +7,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 public class Turnier_Erstellen extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private Button button;
+    public static int gruppen;
+    public static int mannschaften;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,8 @@ public class Turnier_Erstellen extends AppCompatActivity implements AdapterView.
     }
 
     public void openmannschaften() {
+        EditText edText2= (EditText) findViewById(R.id.editText2);
+        mannschaften= Integer.parseInt(edText2.getText().toString());
         Intent intent = new Intent(this,Mannschaftseingabe.class);
         startActivity(intent);
     }
@@ -41,11 +46,20 @@ public class Turnier_Erstellen extends AppCompatActivity implements AdapterView.
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         String text= adapterView.getItemAtPosition(i).toString();
+        gruppen = Integer.parseInt(text);
         Toast.makeText(adapterView.getContext(),text,Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    public static int getgruppen(){
+        return gruppen;
+    }
+
+    public static int getMannschaften(){
+        return mannschaften;
     }
 }
