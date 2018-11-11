@@ -20,6 +20,7 @@ public class Mannschaftseingabe extends AppCompatActivity {
     public int mpg;
     public ArrayList<TextView> textviewlist = new ArrayList<>();
     public ArrayList<EditText> edittextlist = new ArrayList<>();
+    public ArrayList<Mannschaftsobjekt> teilnehmer= new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,11 @@ public class Mannschaftseingabe extends AppCompatActivity {
         }
         for (int x = 0; x < mannschaften; x++) {
             edittextlist.add(new EditText(this));
+            edittextlist.get(x).setId(x);
+        }
+
+        for (int x=0;x<mannschaften;x++){
+            teilnehmer.add(new Mannschaftsobjekt());
         }
 
         mpg(gruppen, mannschaften);
@@ -56,6 +62,9 @@ public class Mannschaftseingabe extends AppCompatActivity {
     }
 
     public void openmenu() {
+        for (int x=0;x<mannschaften;x++){
+            teilnehmer.get(x).setmannschaftsname(edittextlist.get(x).getText().toString());
+        }
         Intent intent = new Intent(this,Menu.class);
         startActivity(intent);
     }
@@ -70,12 +79,13 @@ public class Mannschaftseingabe extends AppCompatActivity {
         }
         Button button2 = new Button(this);
         button2.setText("Weiter");
-        ll.addView(button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openmenu();
             }
         });
+        ll.addView(button2);
+
     }
 }

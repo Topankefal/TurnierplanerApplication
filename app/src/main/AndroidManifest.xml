@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".Turnier_Erstellen" />
         <activity android:name=".Menu" />
-        <activity android:name=".Mannschaftseingabe"></activity>
+        <activity android:name=".Mannschaftseingabe" />
+        <activity android:name=".Tabelle"></activity>
     </application>
 
 </manifest>
