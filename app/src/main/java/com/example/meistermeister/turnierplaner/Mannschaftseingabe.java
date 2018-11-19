@@ -17,10 +17,10 @@ public class Mannschaftseingabe extends AppCompatActivity {
     Turnier_Erstellen turnier = new Turnier_Erstellen();
     public int gruppen = turnier.getgruppen();
     public int mannschaften =turnier.getMannschaften();
-    public int mpg;
+    public static int mpg;
     public ArrayList<TextView> textviewlist = new ArrayList<>();
     public ArrayList<EditText> edittextlist = new ArrayList<>();
-    public ArrayList<Mannschaftsobjekt> teilnehmer= new ArrayList<>();
+    public static ArrayList<Mannschaftsobjekt> teilnehmer= new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +63,7 @@ public class Mannschaftseingabe extends AppCompatActivity {
 
     public void openmenu() {
         for (int x=0;x<mannschaften;x++){
-            teilnehmer.get(x).setmannschaftsname(edittextlist.get(x).getText().toString());
+            teilnehmer.get(x).setMannschaftsname(edittextlist.get(x).getText().toString());
         }
         Intent intent = new Intent(this,Menu.class);
         startActivity(intent);

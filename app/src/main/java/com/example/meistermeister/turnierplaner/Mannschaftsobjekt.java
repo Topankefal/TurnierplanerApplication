@@ -3,11 +3,12 @@ package com.example.meistermeister.turnierplaner;
 public class Mannschaftsobjekt {
     public String gruppenbuchstabe;
     public String mannschaftsname;
-    public int tore,gegentore,punkte;
+    public int tore,gegentore,punkte,tordifferenz=tore-gegentore;
 
     public Mannschaftsobjekt(){
         gruppenbuchstabe= "default";
         mannschaftsname="default";
+        punkte=0;
     }
 
     public String getgruppenbuchstabe() {
@@ -22,7 +23,7 @@ public class Mannschaftsobjekt {
         gruppenbuchstabe=s;
     }
 
-    public void setmannschaftsname(String s) {
+    public void setMannschaftsname(String s) {
         mannschaftsname=s;
     }
 

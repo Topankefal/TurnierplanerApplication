@@ -15,6 +15,8 @@ public class Turnier_Erstellen extends AppCompatActivity implements AdapterView.
     private Button button;
     public static int gruppen;
     public static int mannschaften;
+    public static int minutenprospiel;
+    public static String turniername;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +40,11 @@ public class Turnier_Erstellen extends AppCompatActivity implements AdapterView.
 
     public void openmannschaften() {
         EditText edText2= (EditText) findViewById(R.id.editText2);
+        EditText edText3=  findViewById(R.id.editText9);
+        EditText edText4 = findViewById(R.id.editText);
         mannschaften= Integer.parseInt(edText2.getText().toString());
+        minutenprospiel= Integer.parseInt(edText3.getText().toString());
+        turniername= edText4.getText().toString();
         Intent intent = new Intent(this,Mannschaftseingabe.class);
         startActivity(intent);
     }
